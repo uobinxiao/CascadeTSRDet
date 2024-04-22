@@ -4,7 +4,7 @@
 https://arxiv.org/abs/2312.00699
 
 ## Requirements
-This codebase is built on top of [Detectron2](https://github.com/facebookresearch/detectron2)
+This codebase is built on top of [Detectron2](https://github.com/facebookresearch/detectron2). Follow the instructions [here](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) to install Detectron2.
 
 ## Datasets
 
@@ -15,6 +15,8 @@ This codebase is built on top of [Detectron2](https://github.com/facebookresearc
 ## Evaluation
 
 ## Citing
+
+Please cite our work if you think it is helpful:
 ```
 @article{xiao2023rethinking,
   title={Rethinking Detection Based Table Structure Recognition for Visually Rich Documents},

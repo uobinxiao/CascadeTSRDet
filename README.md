@@ -23,3 +23,6 @@ This codebase is built on top of [Detectron2](https://github.com/facebookresearc
   year={2023}
 }
 ```
+
+## Acknowledgement
+This project heavily relys on [Table-Transformer](https://github.com/microsoft/table-transformer), especially for the post-processing part. We thank the authors for sharing their implementations and related resources.

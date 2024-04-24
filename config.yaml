@@ -1,0 +1,58 @@
+FinTabNet:
+    train_set_name: "fintabnet_train"
+    val_set_name: "fintabnet_val"
+    test_set_name: "fintabnet_test"
+
+    train_image_path: "/data/datasets/TSR_Detection/FinTabNet/fintabnet_detection_format_padded/FinTabNet.c_Image_Structure_PASCAL_VOC_PADDING_2/images"
+    val_image_path: "/data/datasets/TSR_Detection/FinTabNet/fintabnet_detection_format_padded/FinTabNet.c_Image_Structure_PASCAL_VOC_PADDING_2/images"
+    test_image_path: "/data/datasets/TSR_Detection/FinTabNet/fintabnet_detection_format_padded/FinTabNet.c_Image_Structure_PASCAL_VOC_PADDING_2/images"
+
+    train_json_path: "/data/datasets/TSR_Detection/FinTabNet/fintabnet_detection_format_padded/pad2_6classes_train.json"
+    val_json_path: "/data/datasets/TSR_Detection/FinTabNet/fintabnet_detection_format_padded/pad2_6classes_val.json"
+    test_json_path: "/data/datasets/TSR_Detection/FinTabNet/fintabnet_detection_format_padded/pad2_6classes_test.json"
+
+    config_file: "model_config/fintabnet.yaml"
+    meta:
+        thing_classes: ['table', 'table column', 'table row', 'table spanning cell', 'table projected row header', 'table column header']
+    resume: False
+
+SciTSR:
+    train_set_name: "scitsr_train"
+    val_set_name: "scitsr_val"
+    test_set_name: "scitsr_test"
+
+    train_image_path: "/data/datasets/TSR_Detection/SciTSR/scitsr_detection_format_padded/SciTSR.c-Image_Structure_PASCAL_VOC_PADDING_2/images"
+    val_image_path: "/data/datasets/TSR_Detection/SciTSR/scitsr_detection_format_padded/SciTSR.c-Image_Structure_PASCAL_VOC_PADDING_2/images"
+    test_image_path: "/data/datasets/TSR_Detection/SciTSR/scitsr_detection_format_padded/SciTSR.c-Image_Structure_PASCAL_VOC_PADDING_2/images"
+
+    train_json_path: "/data/datasets/TSR_Detection/SciTSR/scitsr_detection_format_padded/pad2_6classes_train.json"
+    val_json_path: "/data/datasets/TSR_Detection/SciTSR/scitsr_detection_format_padded/pad2_6classes_val.json"
+    test_json_path: "/data/datasets/TSR_Detection/SciTSR/scitsr_detection_format_padded/pad2_6classes_test.json"
+
+    config_file: "model_config/scitsr.yaml"
+    meta:
+        thing_classes: ['table', 'table column', 'table row', 'table spanning cell', 'table projected row header', 'table column header']
+    resume: False
+
+PubTables1M:
+    train_set_name: "pubtables1m_train"
+    val_set_name: "pubtables1m_val"
+    test_set_name: "pubtables1m_test"
+
+    train_image_path: "/data/datasets/TSR_Detection/PubTables1M/PubTables1M-Structure-PASCAL-VOC/images"
+    val_image_path: "/data/datasets/TSR_Detection/PubTables1M/PubTables1M-Structure-PASCAL-VOC/images"
+    test_image_path: "/data/datasets/TSR_Detection/PubTables1M/PubTables1M-Structure-PASCAL-VOC/images"
+
+    train_json_path: "/data/datasets/TSR_Detection/PubTables1M/6classes_half_train.json"
+    val_json_path: "/data/datasets/TSR_Detection/PubTables1M/6classes_val.json"
+    test_json_path: "/data/datasets/TSR_Detection/PubTables1M/6classes_test.json"
+
+    config_file: "model_config/pubtables1m.yaml"
+    meta:
+        thing_classes: ['table', 'table column', 'table row', 'table spanning cell', 'table projected row header', 'table column header']
+    resume: False
+
+num_gpus: 8
+num_machines: 1
+machine_rank: 0
+dist_url: "auto"

@@ -1,0 +1,65 @@
+MODEL:
+    META_ARCHITECTURE: "GeneralizedRCNN"
+    BACKBONE:
+        #NAME: "build_resnet_fpn_backbone"
+        NAME: "build_resnet_fpn_backbone_with_spatial_attention"
+    RESNETS:
+        OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+        DEPTH: 50
+        DEFORM_ON_PER_STAGE: [True, True, True, True]
+        NORM: "nnSyncBN"
+    FPN:
+        IN_FEATURES: ["res2", "res3", "res4", "res5"]
+    ANCHOR_GENERATOR:
+        SIZES: [[32], [64], [128], [256], [512]]  # One size for each in feature map
+        #ASPECT_RATIOS: [[0.5, 1.0, 2.0]]
+        ASPECT_RATIOS: [[0.0125, 0.025, 0.0625, 0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16, 40, 80]]  # Three aspect ratios (same for all in feature maps)
+    RPN:
+        IN_FEATURES: ["p2", "p3", "p4", "p5", "p6"]
+        PRE_NMS_TOPK_TRAIN: 4000  # Per FPN level
+        PRE_NMS_TOPK_TEST: 2000  # Per FPN level
+        # Detectron1 uses 2000 proposals per-batch,
+        # # (See "modeling/rpn/rpn_outputs.py" for details of this legacy issue)
+        # # which is approximately 1000 proposals per-image since the default batch size for FPN is 2.
+        POST_NMS_TOPK_TRAIN: 4000
+        POST_NMS_TOPK_TEST: 2000
+    ROI_HEADS:
+        NAME: "MyCascadeROIHeads"
+        IN_FEATURES: ["p2", "p3", "p4", "p5"]
+        #NUM_CLASSES: 7
+        NUM_CLASSES: 6
+        NMS_THRESH_TEST: 0.9
+    ROI_BOX_HEAD:
+        NAME: "MyFastRCNNConvFCHead"
+        NUM_FC: 2
+        POOLER_RESOLUTION: 7
+        CLS_AGNOSTIC_BBOX_REG: True
+    ROI_MASK_HEAD:
+        NAME: "MaskRCNNConvUpsampleHead"
+        NUM_CONV: 4
+        POOLER_RESOLUTION: 14
+    WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+    MASK_ON: False
+    PIXEL_MEAN: [243.0328, 243.0648, 243.0702]
+
+DATASETS:
+    TRAIN: ( "pubtables1m_train", )
+    TEST: ( "pubtables1m_val",)
+
+SOLVER:
+    IMS_PER_BATCH: 16
+    BASE_LR: 0.02
+    #STEPS: (210000, 250000)
+    #MAX_ITER: 270000
+    #STEPS: (473595,)
+    #MAX_ITER: 710392
+    STEPS: (236797,)
+    MAX_ITER: 355196
+INPUT:
+    MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+
+OUTPUT_DIR: "/data/logs/PubTables1M_Cascade_RCNN_7classes_baseline"
+
+TEST:
+    EVAL_PERIOD: 27000
+VERSION: 2

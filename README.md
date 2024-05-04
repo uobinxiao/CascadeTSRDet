@@ -9,6 +9,9 @@ This codebase is built on top of [Detectron2](https://github.com/facebookresearc
 ## Datasets
 
 ## Pretrained Model
+[FinTabNet](https://drive.google.com/drive/folders/1lM8ydqVo9Ksje1-L2UDXCN62Vst4Mu2e?usp=sharing)
+[PubTables1M](https://drive.google.com/drive/folders/1BTB3aWw7R1xeztAp7NPrwpV75sejbxtb?usp=sharing)
+[SciTSR](https://drive.google.com/drive/folders/1IogkVxQ1IkOpvqtieYYoTir-NrXHsNdg?usp=sharing)
 
 ## Configuration and Training
 

@@ -15,7 +15,13 @@ This codebase is built on top of [Detectron2](https://github.com/facebookresearc
 
 ## Configuration and Training
 
-## Evaluation
+## Inference and Evaluation
+Check the inference.py and test.sh for the inference. A sample inference command could be:
+```
+python inference.py --mode recognize --structure_config_path <path of config.yaml> --structure_model_path <path of weight> --structure_device cuda --image_dir <dir of table images> --out_dir <output dir> --html --visualize --csv --crop_padding 0
+```
+
+Check the teds.py for calculating the TEDS score.
 
 ## Citing
 

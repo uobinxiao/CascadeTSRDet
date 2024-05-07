@@ -11,7 +11,7 @@ This codebase is built on top of [Detectron2](https://github.com/facebookresearc
 |Dataset | Weights|
 |--------|--------|
 |[PubTables1M](https://huggingface.co/datasets/bsmock/pubtables-1m) | [PubTables1M](https://drive.google.com/drive/folders/1BTB3aWw7R1xeztAp7NPrwpV75sejbxtb?usp=sharing)|
-|[FinTabNet]([bsmock/FinTabNet.c](https://huggingface.co/datasets/bsmock/FinTabNet.c))|[FinTabNet](https://drive.google.com/drive/folders/1lM8ydqVo9Ksje1-L2UDXCN62Vst4Mu2e?usp=sharing)|
+|[FinTabNet](https://huggingface.co/datasets/bsmock/FinTabNet.c)|[FinTabNet](https://drive.google.com/drive/folders/1lM8ydqVo9Ksje1-L2UDXCN62Vst4Mu2e?usp=sharing)|
 |[SciTSR](https://huggingface.co/datasets/uobinxiao/SciTSR_Detection)|[SciTSR](https://drive.google.com/drive/folders/1IogkVxQ1IkOpvqtieYYoTir-NrXHsNdg?usp=sharing)|
 
 ## Configuration and Training

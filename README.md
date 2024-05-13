@@ -6,13 +6,23 @@ https://arxiv.org/abs/2312.00699
 ## Requirements
 This codebase is built on top of [Detectron2](https://github.com/facebookresearch/detectron2). Follow the instructions [here](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) to install Detectron2.
 
-## Datasets
+## Datasets and Pretrained Model
 
-## Pretrained Model
+|Dataset | Weights|
+|--------|--------|
+|[PubTables1M](https://huggingface.co/datasets/bsmock/pubtables-1m) | [PubTables1M](https://drive.google.com/drive/folders/1BTB3aWw7R1xeztAp7NPrwpV75sejbxtb?usp=sharing)|
+|[FinTabNet](https://huggingface.co/datasets/bsmock/FinTabNet.c)|[FinTabNet](https://drive.google.com/drive/folders/1lM8ydqVo9Ksje1-L2UDXCN62Vst4Mu2e?usp=sharing)|
+|[SciTSR](https://huggingface.co/datasets/uobinxiao/SciTSR_Detection)|[SciTSR](https://drive.google.com/drive/folders/1IogkVxQ1IkOpvqtieYYoTir-NrXHsNdg?usp=sharing)|
 
 ## Configuration and Training
 
-## Evaluation
+## Inference and Evaluation
+Check the inference.py and test.sh for the inference. A sample inference command could be:
+```
+python inference.py --mode recognize --structure_config_path <path of config.yaml> --structure_model_path <path of weight> --structure_device cuda --image_dir <dir of table images> --out_dir <output dir> --html --visualize --csv --crop_padding 0
+```
+
+Check the teds.py for calculating the TEDS score.
 
 ## Citing
 

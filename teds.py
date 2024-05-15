@@ -200,54 +200,15 @@ if __name__ == '__main__':
     import json
     import pprint
 
-
-    #gt_dir = "/data/datasets/TSR_Detection/PubTables1M/PubTables1M_html_gt_structure_only_6classes"
-    #pred_dir = "/data/logs/pubtab1m_results_cascadercnn_pred_no_text"
-    #pred_dir = "/data/logs/pubtab1m_results_cascadercnn_pred_no_text_baseline"
-    #pred_dir = "/data/logs/pubtab1m_comp_results"
-    #pred_dir = "/data/logs/pub1m_results"
-
-    #gt_dir = "/data/logs/fintabnet_html_gt"
-    #pred_dir = "/data/logs/fintabnet_comp_results"
-
-    #gt_dir = "/data/logs/fintabnet_html_gt_with_text"
-    #gt_dir = "/data/logs/fintabnet_html_gt_with_text_6classes"
-    #gt_dir = "/data/logs/fintabnet_html_gt_no_text_6classes"
-
-    #gt_dir = "/data/logs/scitsr_html_gt_with_text_6classes"
-    #gt_dir = "/data/logs/scitsr_html_gt_no_text_6classes"
-
-    #pred_dir = "/data/logs/scitsr_results_6classes_comp_no_text"
-    #pred_dir = "/data/logs/scitsr_results_grid_no_text_6classes"
-
-    #pred_dir = "/data/logs/deformable_detr_results_scitsr_6classes_with_text"
-
-    #pred_dir = "/data/logs/pub1m_results"
-
-    #pred_dir = "/data/logs/fintabnet_6classes_sim_with_text"
-    #pred_dir = "/data/logs/fintanet_results_cascadercnn_pred_with_text_6classes"
-
-
-    #gt_dir = "/data/datasets/PubTabNet/val_gt_structure_only"
-    #pred_dir = "/data/datasets/PubTabNet/val_html_pred"
-    #pred_dir = "/data/datasets/PubTabNet/sim_val_pred"
-
-
-    #gt_dir = "/data/datasets/fintabnet_donut_test/gt_html"
-    #pred_dir = "/data/logs/donut_html_output"
-
+    #set gt_dir and pred_dir here
+    gt_dir = ""
+    pred_dir = ""
 
     pred_dict = collect_html(pred_dir, is_gt=False)
     gt_dict = collect_html(gt_dir, is_gt = True)
 
-    #with open('sample_pred_selected.json') as fp:
-    #    pred_json = json.load(fp)
-    #with open('sample_gt_selected.json') as fp:
-    #    gt_json = json.load(fp)
-
     teds = TEDS(n_jobs=80)
     scores = teds.batch_evaluate(pred_dict, gt_dict)
-    #scores = teds.batch_evaluate(pred_json, gt_json)
     pp = pprint.PrettyPrinter()
     #pp.pprint(scores)
     print("length of scores:", len(scores) , "final average score:", sum(scores.values()) / len(scores.values()))

@@ -16,8 +16,7 @@ from detectron2.layers import (
 
 from detectron2.modeling import Backbone
 from detectron2.modeling import BACKBONE_REGISTRY
-#from .spatial_attention import SpatialAttention
-from .simple_spatial_attention import SpatialAttention
+from .spatial_attention import SpatialAttention
 
 __all__ = [
     "ResNetBlockBase",

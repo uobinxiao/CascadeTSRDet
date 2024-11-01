@@ -36,8 +36,8 @@ MODEL:
         NAME: "MyCascadeROIHeads"
         #NAME: "CascadeROIHeads"
         IN_FEATURES: ["p2", "p3", "p4", "p5"]
-        #NUM_CLASSES: 7
-        NUM_CLASSES: 6
+        NUM_CLASSES: 7
+        #NUM_CLASSES: 6
         NMS_THRESH_TEST: 0.9
     ROI_BOX_HEAD:
         #default value is smooth l1, can be giou and ciou
@@ -72,7 +72,7 @@ SOLVER:
 INPUT:
     MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
 
-OUTPUT_DIR: "/data/logs/FinTabNet_Cascade_Mask_RCNN_Output_R50_padded2_6class_deform"
+OUTPUT_DIR: "/data/logs/FinTabNet_TSRDet"
 
 TEST:
     #EVAL_PERIOD: 27000

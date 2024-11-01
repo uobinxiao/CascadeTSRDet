@@ -26,8 +26,8 @@ MODEL:
     ROI_HEADS:
         NAME: "MyCascadeROIHeads"
         IN_FEATURES: ["p2", "p3", "p4", "p5"]
-        #NUM_CLASSES: 7
-        NUM_CLASSES: 6
+        NUM_CLASSES: 7
+        #NUM_CLASSES: 6
         NMS_THRESH_TEST: 0.9
     ROI_BOX_HEAD:
         NAME: "MyFastRCNNConvFCHead"
@@ -58,7 +58,7 @@ SOLVER:
 INPUT:
     MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
 
-OUTPUT_DIR: "/data/logs/PubTables1M_Cascade_RCNN_7classes_baseline"
+OUTPUT_DIR: "/data/logs/PubTables1M_TSRDet"
 
 TEST:
     EVAL_PERIOD: 27000

@@ -68,7 +68,7 @@ SOLVER:
 INPUT:
     MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
 
-OUTPUT_DIR: "/data/logs/SciTSR_Cascade_Mask_RCNN_Output_R50_padded2_spatial_attn_test2"
+OUTPUT_DIR: "/data/logs/SciTSR_TSRDet"
 
 TEST:
     #EVAL_PERIOD: 27000

@@ -28,11 +28,13 @@ Check the teds.py for calculating the TEDS score.
 
 Please cite our work if you think it is helpful:
 ```
-@article{xiao2023rethinking,
-  title={Rethinking Detection Based Table Structure Recognition for Visually Rich Documents},
+@article{xiao2025rethinking,
+  title={Rethinking detection based table structure recognition for visually rich document images},
   author={Xiao, Bin and Simsek, Murat and Kantarci, Burak and Alkheir, Ala Abu},
-  journal={arXiv preprint arXiv:2312.00699},
-  year={2023}
+  journal={Expert Systems with Applications},
+  pages={126461},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
 

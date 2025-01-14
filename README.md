@@ -1,7 +1,8 @@
 # Rethinking Detection Based Table Structure Recognition for Visually Rich Document Images
 
 ## Paper Link
-https://arxiv.org/abs/2312.00699
+This paper has been published in Expert Systems with Applications, checkout the link below for the full version:
+https://www.sciencedirect.com/science/article/pii/S0957417425000831
 
 ## Requirements
 This codebase is built on top of [Detectron2](https://github.com/facebookresearch/detectron2). Follow the instructions [here](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) to install Detectron2.
